@@ -44,7 +44,7 @@ CREATE TABLE file_hashes (
   product INTEGER NOT NULL REFERENCES products(id),
   device INTEGER DEFAULT 0 REFERENCES devices(id),
   algo INTEGER NOT NULL REFERENCES algorithms(id),
-  hash BLOB NOT NULL
+  hash VARCHAR(64) NOT NULL
 );
 
 DROP TABLE IF EXISTS groups;
